@@ -44,6 +44,8 @@ public class Main {
 	            		{
 	            			m.Matrix(mSize, matrixLine);
 				            bufferedWriter.write(m.printMatrix());	  
+				            bufferedWriter.write("det(M) = " + m.determinant());
+				            bufferedWriter.newLine();
 	            		}
 	            		count++;
 	            	}

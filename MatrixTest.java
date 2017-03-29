@@ -7,7 +7,10 @@ public class MatrixTest {
 
 	@Test
 	public void testDeterminant() {
-
+		Matrix m = new Matrix();
+		m.Matrix(3,"1 2 3 2 1 3 3 1 2");
+		
+		assertEquals(6.0, m.determinant(),0.001);
 	}
 
 	@Test

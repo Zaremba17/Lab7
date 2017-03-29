@@ -51,7 +51,7 @@ public class Matrix {
 
 	public double determinant()
 	{
-		return 0;
+		return 0.0;
 
 	}
 	
@@ -69,7 +69,24 @@ public class Matrix {
 	
 	public String printMatrix()
 	{
-		return null;
+		String m1 = "";
+		for (int x = 0;x<n;x++)
+		{
+			for (int y = 0;y<n;y++)
+			{
+				if (mdata[x][y] % 1 == 0)
+				{
+					m1 = m1 + (int)mdata[x][y] + " ";
+				}
+				else
+				{
+					m1 = m1 + mdata[x][y] + " ";
+				}
 
+			}
+				m1 = m1 + "\n";
+		}
+
+		return m1;
 	}
 }

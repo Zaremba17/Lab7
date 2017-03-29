@@ -75,8 +75,19 @@ public class Matrix {
 	
 	public Matrix inverse()
 	{
-		return null;
-
+		Matrix inv = new Matrix();
+		inv.Matrix(n,"f");
+		double det = determinant();
+		
+		for (int i = 0; i < n; ++i)
+		{
+			for (int j = 0; j < n; ++j)
+			{
+				inv.mdata[i][j] = Math.pow(-1.0, (double)i + j) * subMatrix(j, i).determinant() / det + + 0.0;
+			}
+		}
+		
+		return inv;
 	}
 	
 	public Matrix subMatrix(int r, int c)
@@ -115,7 +126,7 @@ public class Matrix {
 				{
 					m1 = m1 + (int)mdata[x][y] + " ";
 				}
-				else
+				else 
 				{
 					m1 = m1 + mdata[x][y] + " ";
 				}
@@ -131,4 +142,5 @@ public class Matrix {
 		
 		return mdata;
 	}
+	
 }

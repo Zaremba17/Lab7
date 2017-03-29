@@ -46,6 +46,9 @@ public class Main {
 				            bufferedWriter.write(m.printMatrix());	  
 				            bufferedWriter.write("det(M) = " + m.determinant());
 				            bufferedWriter.newLine();
+				            bufferedWriter.write("Minv = ");
+				            bufferedWriter.newLine();
+				            bufferedWriter.write(m.inverse().printMatrix());
 	            		}
 	            		count++;
 	            	}

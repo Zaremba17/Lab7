@@ -15,7 +15,18 @@ public class MatrixTest {
 
 	@Test
 	public void testInverse() {
+		Matrix m = new Matrix();
+		m.Matrix(2,"2 0 0 2");
+		m = m.inverse();
+		System.out.println(m.printMatrix());
 
+		double[][] testArr = new double[10][10];
+		testArr[0][0] = .5;
+		testArr[0][1] = 0;
+		testArr[1][0] = 0;
+		testArr[1][1] = .5;
+
+		assertEquals(m.getArray(), testArr);
 	}
 
 	@Test
